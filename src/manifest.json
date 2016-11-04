@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "middleClickToSearch",
+  "description": "allows middle click to google a selected text, like Firefox add-on \"OneTouchSearch\".",
+  "version": "0.1",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
